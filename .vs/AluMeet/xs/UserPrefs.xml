@@ -1,4 +1,30 @@
 ﻿<Properties StartupConfiguration="{1B38CBAE-9EFD-4F4A-AA38-95FC4DD2B083}|Default">
-  <MonoDevelop.Ide.ItemProperties.AluMeet FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.ItemProperties.AluMeet FirstBuild="True" PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AluMeet/Model/JobModel.cs">
+    <Files>
+      <File FileName="AluMeet/MainPage.xaml.cs" />
+      <File FileName="AluMeet/MainPage.xaml" Line="11" Column="1" />
+      <File FileName="AluMeet/Model/JobModel.cs" Line="19" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AluMeet" expanded="True">
+            <Node name="AluMeet" expanded="True">
+              <Node name="Model" expanded="True">
+                <Node name="JobModel.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
