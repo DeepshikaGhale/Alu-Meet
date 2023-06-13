@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AluMeet.csproj": {}
+    "/Users/deepshikaghale/Documents/FInalProject/Alu-Meet/AluMeet/AluMeet.csproj": {}
   },
   "projects": {
-    "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AluMeet.csproj": {
+    "/Users/deepshikaghale/Documents/FInalProject/Alu-Meet/AluMeet/AluMeet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AluMeet.csproj",
+        "projectUniqueName": "/Users/deepshikaghale/Documents/FInalProject/Alu-Meet/AluMeet/AluMeet.csproj",
         "projectName": "AluMeet",
-        "projectPath": "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AluMeet.csproj",
-        "packagesPath": "/Users/bikash95/.nuget/packages/",
-        "outputPath": "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/obj/",
+        "projectPath": "/Users/deepshikaghale/Documents/FInalProject/Alu-Meet/AluMeet/AluMeet.csproj",
+        "packagesPath": "/Users/deepshikaghale/.nuget/packages/",
+        "outputPath": "/Users/deepshikaghale/Documents/FInalProject/Alu-Meet/AluMeet/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "/Users/bikash95/.nuget/NuGet/NuGet.Config"
+          "/Users/deepshikaghale/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0-android",
@@ -147,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
         },
         "net6.0-ios16.1": {
           "targetAlias": "net6.0-ios",
@@ -230,7 +230,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
         },
         "net6.0-maccatalyst16.1": {
           "targetAlias": "net6.0-maccatalyst",
@@ -314,7 +314,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
