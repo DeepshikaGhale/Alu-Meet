@@ -10,8 +10,12 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="AluMeet/Model/JobModel.cs">
     <Files>
       <File FileName="AluMeet/MainPage.xaml.cs" />
-      <File FileName="AluMeet/MainPage.xaml" Line="11" Column="1" />
-      <File FileName="AluMeet/Model/JobModel.cs" Line="19" Column="1" />
+      <File FileName="AluMeet/MainPage.xaml" />
+      <File FileName="AluMeet/Model/JobModel.cs" Line="18" Column="1" />
+      <File FileName="AluMeet/Model/AlumniModel.cs" />
+      <File FileName="AluMeet/MauiProgram.cs" />
+      <File FileName="AluMeet/App.xaml" />
+      <File FileName="AluMeet/App.xaml.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,6 +25,8 @@
               <Node name="Model" expanded="True">
                 <Node name="JobModel.cs" selected="True" />
               </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
