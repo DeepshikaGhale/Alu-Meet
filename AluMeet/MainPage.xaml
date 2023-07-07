@@ -3,40 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    
+            <Grid
+                RowDefinitions="100, 100, 100"
+                ColumnDefinitions="100, 100"
+                ColumnSpacing="30"
+                RowSpacing="30"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                >
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+                <Button Grid.Row="0" Grid.Column="0" Text="Login"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Register"/>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                <Button Grid.Row="1" Grid.Column="0" Text="Jobs"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="Events"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+                <Button Grid.Row="2" Grid.Column="1" Text="Directory"/>
+            </Grid>
+        
 
 </ContentPage>
 
