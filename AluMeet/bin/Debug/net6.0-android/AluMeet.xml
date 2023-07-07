@@ -72,6 +72,41 @@
             Gets or sets the profile picture of the alumni.
             </summary>
         </member>
+        <member name="T:AluMeet.Model.EventModel">
+            <summary>
+            Represents an event with details such as ID, title, location, date, time, and description.
+            </summary>
+        </member>
+        <member name="P:AluMeet.Model.EventModel.ID">
+            <summary>
+            Gets or sets the unique identifier of the event.
+            </summary>
+        </member>
+        <member name="P:AluMeet.Model.EventModel.EventTitle">
+            <summary>
+            Gets or sets the title of the event.
+            </summary>
+        </member>
+        <member name="P:AluMeet.Model.EventModel.Location">
+            <summary>
+            Gets or sets the location of the event.
+            </summary>
+        </member>
+        <member name="P:AluMeet.Model.EventModel.DateOfEvent">
+            <summary>
+            Gets or sets the date of the event.
+            </summary>
+        </member>
+        <member name="P:AluMeet.Model.EventModel.TimeOfEvent">
+            <summary>
+            Gets or sets the time of the event.
+            </summary>
+        </member>
+        <member name="P:AluMeet.Model.EventModel.Description">
+            <summary>
+            Gets or sets the description of the event.
+            </summary>
+        </member>
         <member name="T:AluMeet.Model.JobModel">
             <summary>
             Represents a job with details such as title, company name, location, description, and deadline.

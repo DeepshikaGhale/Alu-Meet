@@ -40,8 +40,8 @@ build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Resources.Styles.S
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/Views/LoginViewPage.xaml]
+[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/Views/LoginViewScreen.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.LoginViewPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views/LoginViewPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views/LoginViewPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.LoginViewScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/LoginViewScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/LoginViewScreen.xaml
