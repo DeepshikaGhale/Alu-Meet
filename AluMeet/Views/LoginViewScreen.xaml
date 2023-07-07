@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.Views.LoginViewScreen"
              Title="LoginViewScreen">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout HorizontalOptions="Center" Margin="0,100,0,0">
+            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50"
+       BorderColor="Black" BackgroundColor="Transparent" HasShadow="False"
+                   Margin="0,0,0, 40">
+    <Image Source="AluMeet.Resources.Images.profile_user.png" Aspect="AspectFill" />
+</Frame>
+
+
+        <!--Username Textfield-->
+        <Frame Padding="25, 0, 20, 0" Margin="0, 0, 0, 20" WidthRequest="250">
+            <Entry Placeholder="Username or Email" />
+        </Frame>
+
+        <!--Password Textfield-->
+        <Frame Padding="25, 0, 20, 0" WidthRequest="250">
+            <Entry Placeholder="Password" />
+        </Frame>
+
+        <!--Login Button-->
+        <Button Text="LOGIN" WidthRequest="250" Margin="0, 20, 0,0"/>
     </VerticalStackLayout>
 </ContentPage>
