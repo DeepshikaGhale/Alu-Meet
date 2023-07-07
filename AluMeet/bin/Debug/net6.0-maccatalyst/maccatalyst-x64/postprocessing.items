@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="AluMeet.app/Contents/MacOS/AluMeet">
+      <BCSymbolMapName>AluMeet.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>AluMeet.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/obj/Debug/net6.0-maccatalyst/maccatalyst-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>AluMeet.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
