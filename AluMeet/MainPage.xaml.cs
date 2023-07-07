@@ -1,4 +1,6 @@
-﻿namespace AluMeet;
+﻿using AluMeet.Views;
+
+namespace AluMeet;
 
 public partial class MainPage : ContentPage
 {
@@ -6,6 +8,17 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	// func to navigate to login screen
+	private void loginNavBtnItemTapped(object obj, EventArgs e) {
+		Navigation.PushAsync(new LoginViewScreen());
+	}
+
+    // func to navigate to register screen
+    private void RegisterNavBtnItemTapped(object obj, EventArgs e)
+    {
+        Navigation.PushAsync(new RegisterViewScreen());
+    }
 }
 
 
