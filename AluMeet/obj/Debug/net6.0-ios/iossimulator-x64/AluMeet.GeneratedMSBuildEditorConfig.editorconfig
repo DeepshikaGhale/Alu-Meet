@@ -8,45 +8,51 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AluMeet
-build_property.ProjectDir = /Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/
+build_property.ProjectDir = /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/App.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AppShell.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/MainPage.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/Resources/Styles/Colors.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/Resources/Styles/Styles.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/Views/LoginViewScreen.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/LoginViewScreen.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.LoginViewScreen.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/LoginViewScreen.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/LoginViewScreen.xaml
 
-[/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/Views/RegisterViewScreen.xaml]
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/PostEventScreen.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.PostEventScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PostEventScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PostEventScreen.xaml
+
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/RegisterViewScreen.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.RegisterViewScreen.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/RegisterViewScreen.xaml

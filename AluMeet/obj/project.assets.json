@@ -19224,20 +19224,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/bikash95/.nuget/packages/": {}
+    "/Users/deepshikaghale/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AluMeet.csproj",
+      "projectUniqueName": "/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/AluMeet.csproj",
       "projectName": "AluMeet",
-      "projectPath": "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/AluMeet.csproj",
-      "packagesPath": "/Users/bikash95/.nuget/packages/",
-      "outputPath": "/Users/bikash95/Desktop/FinalProject/Alu-Meet/AluMeet/obj/",
+      "projectPath": "/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/AluMeet.csproj",
+      "packagesPath": "/Users/deepshikaghale/.nuget/packages/",
+      "outputPath": "/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
-        "/Users/bikash95/.nuget/NuGet/NuGet.Config"
+        "/Users/deepshikaghale/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0-android",
@@ -19301,35 +19301,35 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.Android.Ref.31",
-            "version": "[32.0.509, 32.0.509]"
+            "version": "[32.0.485, 32.0.485]"
           },
           {
             "name": "Microsoft.Android.Runtime.31.android-arm",
-            "version": "[32.0.509, 32.0.509]"
+            "version": "[32.0.485, 32.0.485]"
           },
           {
             "name": "Microsoft.Android.Runtime.31.android-arm64",
-            "version": "[32.0.509, 32.0.509]"
+            "version": "[32.0.485, 32.0.485]"
           },
           {
             "name": "Microsoft.Android.Runtime.31.android-x64",
-            "version": "[32.0.509, 32.0.509]"
+            "version": "[32.0.485, 32.0.485]"
           },
           {
             "name": "Microsoft.Android.Runtime.31.android-x86",
-            "version": "[32.0.509, 32.0.509]"
+            "version": "[32.0.485, 32.0.485]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-            "version": "[6.0.18, 6.0.18]"
+            "version": "[6.0.16, 6.0.16]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-            "version": "[6.0.18, 6.0.18]"
+            "version": "[6.0.16, 6.0.16]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[6.0.18, 6.0.18]"
+            "version": "[6.0.16, 6.0.16]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.android",
@@ -19373,7 +19373,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
       },
       "net6.0-ios16.1": {
         "targetAlias": "net6.0-ios",
@@ -19412,11 +19412,11 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.iOS.Ref",
-            "version": "[16.4.60, 16.4.60]"
+            "version": "[16.4.47, 16.4.47]"
           },
           {
             "name": "Microsoft.iOS.Runtime.iossimulator-x64",
-            "version": "[16.4.60, 16.4.60]"
+            "version": "[16.4.47, 16.4.47]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.ios",
@@ -19460,7 +19460,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
       },
       "net6.0-maccatalyst16.1": {
         "targetAlias": "net6.0-maccatalyst",
@@ -19500,11 +19500,11 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.MacCatalyst.Ref",
-            "version": "[16.4.60, 16.4.60]"
+            "version": "[16.4.47, 16.4.47]"
           },
           {
             "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64",
-            "version": "[16.4.60, 16.4.60]"
+            "version": "[16.4.47, 16.4.47]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.maccatalyst",
@@ -19548,7 +19548,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

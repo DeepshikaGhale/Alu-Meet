@@ -1,29 +1,26 @@
 ﻿<Properties StartupConfiguration="{1B38CBAE-9EFD-4F4A-AA38-95FC4DD2B083}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
-  <MonoDevelop.Ide.ItemProperties.AluMeet FirstBuild="True" PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AluMeet/Model/EventModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AluMeet/Views/PostEventScreen.xaml.cs">
     <Files>
-      <File FileName="AluMeet/MainPage.xaml.cs" />
-      <File FileName="AluMeet/MainPage.xaml" />
-      <File FileName="AluMeet/Model/JobModel.cs" Line="14" Column="1" />
-      <File FileName="AluMeet/Model/AlumniModel.cs" Line="11" Column="25" />
-      <File FileName="AluMeet/MauiProgram.cs" />
-      <File FileName="AluMeet/App.xaml" />
-      <File FileName="AluMeet/App.xaml.cs" />
-      <File FileName="AluMeet/Model/EventModel.cs" Line="34" Column="1" />
+      <File FileName="AluMeet/Views/PostEventScreen.xaml" Line="29" Column="29" />
+      <File FileName="AluMeet/Views/PostEventScreen.xaml.cs" Line="26" Column="1" />
+      <File FileName="AluMeet/Views/LoginViewScreen.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AluMeet" expanded="True">
             <Node name="AluMeet" expanded="True">
-              <Node name="Model" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="Images" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="LoginViewScreen.xaml" expanded="True" />
+                <Node name="PostEventScreen.xaml" expanded="True">
+                  <Node name="PostEventScreen.xaml.cs" selected="True" />
+                </Node>
+              </Node>
               <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True" />
             </Node>
@@ -32,4 +29,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.ItemProperties.AluMeet PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
