@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="AluMeet.Views.PostEventScreen"
+                 Title="PostEventScreen">
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--Event Title Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Entry Placeholder="Event Title" />
+                </Frame>
+
+                <!--Location Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Entry Placeholder="Location" />
+                </Frame>
+
+                <!--Date of Event Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                    <Entry x:Name="DateOfEvent" Placeholder="Date of Event" IsEnabled="False"/>
+                    <ImageButton Source="Images/calender.png" HeightRequest="20" Margin="5" Grid.Column="1" HorizontalOptions="End" Clicked="ChooseDate" />
+                        </Grid>
+                 </Frame>   
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                     </Grid.ColumnDefinitions>
+
+                    <!--Time of Event Textfield-->
+                    <Frame Grid.Column="0" Padding="15, 6, 15, 6" Margin="20, 5, 10, 15">
+                        <Entry Placeholder="Time of Event" />
+                    </Frame>
+
+                     <!--AM Textfield-->
+                     <Frame Grid.Column="1" Padding="15, 6, 15, 6" Margin="0, 5, 20, 15">
+                        <Entry Placeholder="AM" />
+                     </Frame>
+                </Grid>
+
+
+
+                <!--Description of the Event Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Editor Placeholder="Description of the event" HorizontalOptions="FillAndExpand" HeightRequest="120"  MinimumWidthRequest="500"/>
+                </Frame>
+
+                <!--RSVPs Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Entry Placeholder="RSVPs" />
+                </Frame>
+
+
+                <!--Post Event Details Button-->
+                <Button Text="Post Event Details" Padding="15" Margin="20, 0, 20, 0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

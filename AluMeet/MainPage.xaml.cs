@@ -19,6 +19,12 @@ public partial class MainPage : ContentPage
     {
         Navigation.PushAsync(new RegisterViewScreen());
     }
+
+    // func to navigate to events screen
+    private void PostEventsNavBtnItemTapped(object obj, EventArgs e)
+    {
+        Navigation.PushAsync(new PostEventScreen());
+    }
 }
 
 
