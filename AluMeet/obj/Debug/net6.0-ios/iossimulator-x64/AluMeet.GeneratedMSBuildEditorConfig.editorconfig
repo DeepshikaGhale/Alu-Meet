@@ -64,6 +64,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.PostEventScr
 build_metadata.AdditionalFiles.TargetPath = Views/PostEventScreen.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/PostEventScreen.xaml
 
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/PostJobDetailsScreen.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.PostJobDetailsScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PostJobDetailsScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PostJobDetailsScreen.xaml
+
 [/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/RegisterViewScreen.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.RegisterViewScreen.xaml

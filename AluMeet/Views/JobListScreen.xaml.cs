@@ -59,7 +59,6 @@ public partial class JobListScreen : ContentPage
 
     private void AddJobDetailsClicked(object sender, EventArgs e)
     {
-        //Navigation.PushAsync(new PostEventScreen());
-        //Console.WriteLine("Goes to new screen");
+        Navigation.PushAsync(new PostJobDetailsScreen());
     }
 }
