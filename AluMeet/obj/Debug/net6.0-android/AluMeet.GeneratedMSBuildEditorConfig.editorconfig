@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Resources.Styles.S
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/DirectoryListScreen.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.DirectoryListScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/DirectoryListScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/DirectoryListScreen.xaml
+
 [/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/EventListScreen.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.EventListScreen.xaml

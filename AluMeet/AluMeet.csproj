@@ -58,6 +58,7 @@
 	  <None Remove="Services\" />
 	  <None Remove="Resources\Images\calender.png" />
 	  <None Remove="Resources\Images\back_arrow.svg" />
+	  <None Remove="Resources\Images\alumini_cap.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Model\" />
@@ -72,5 +73,6 @@
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\calender.png" />
 	  <BundleResource Include="Resources\Images\back_arrow.svg" />
+	  <BundleResource Include="Resources\Images\alumini_cap.svg" />
 	</ItemGroup>
 </Project>
