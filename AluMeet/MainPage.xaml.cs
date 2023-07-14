@@ -25,6 +25,12 @@ public partial class MainPage : ContentPage
     {
         Navigation.PushAsync(new EventListScreen());
     }
+
+    // func to navigate to events screen
+    private void JobNavBtnItemTapped(object obj, EventArgs e)
+    {
+        Navigation.PushAsync(new JobListScreen());
+    }
 }
 
 
