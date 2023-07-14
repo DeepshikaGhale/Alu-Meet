@@ -31,6 +31,12 @@ public partial class MainPage : ContentPage
     {
         Navigation.PushAsync(new JobListScreen());
     }
+
+    // func to navigate to jobs screen
+    private void DirectoryNavBtnItemTapped(object obj, EventArgs e)
+    {
+        Navigation.PushAsync(new DirectoryListScreen());
+    }
 }
 
 

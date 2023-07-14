@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AluMeet.Views.DirectoryListScreen"
+             Title="DirectoryListScreen">
+    <ListView
+            ItemsSource="{Binding AluminiList}"
+            HasUnevenRows="True"
+            Margin="0, 15, 0, 0"
+            SeparatorVisibility="None">
+
+            <!-- DataTemplate for each item in the ListView -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- ViewCell to define the layout of each item -->
+                    <ViewCell>
+                        <!-- Grid to hold the content of the item -->
+                        <Grid>
+                            <!-- Frame to provide a visual container for the content -->
+                            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15" BackgroundColor="Transparent">
+                                <!-- Grid layout to show directories -->
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Label to display the name -->
+                                    <Label
+                                        Text="{Binding Name}"
+                                        TextColor="{DynamicResource Key=AppColor}"
+                                        FontSize="16"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Start" 
+                                        HorizontalOptions="Start"
+                                        Margin="0, 0, 0, 5"
+                                    />
+
+                                    <!-- Icon display -->
+                                    <Image
+                                        Source="Images/alumini_cap.svg"
+                                        Grid.Column="1"
+                                        HeightRequest="20"
+                                        />
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+</ContentPage>

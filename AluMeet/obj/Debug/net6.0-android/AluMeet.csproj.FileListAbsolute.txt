@@ -1920,3 +1920,8 @@
 /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/android/assets/System.Private.CoreLib.dll
 /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/android/assets/System.Private.Uri.dll
 /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/android/assets/System.Xml.dll
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-hdpi/alumini_cap.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-mdpi/alumini_cap.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-xhdpi/alumini_cap.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-xxhdpi/alumini_cap.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-xxxhdpi/alumini_cap.png
