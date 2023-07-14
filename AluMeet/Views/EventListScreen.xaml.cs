@@ -5,13 +5,13 @@ using AluMeet.Model;
 namespace AluMeet.Views;
 
 public partial class EventListScreen : ContentPage
-{
+{   //data for list view
     public ObservableCollection<EventModel> EventList { get; set; }
 
     public EventListScreen()
 	{
 		InitializeComponent();
-        
+        //populate list view with data
         EventList = new ObservableCollection<EventModel>
         {
             new EventModel{
