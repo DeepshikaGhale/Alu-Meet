@@ -9,7 +9,7 @@
     </ContentPage.ToolbarItems>-->
 
     <ScrollView>
-        <VerticalStackLayout Margin="0, 20, 0, 0">
+        <VerticalStackLayout Margin="0, 25, 0, 25">
             <!--Event Title Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
                     <Entry Placeholder="Event Title" />

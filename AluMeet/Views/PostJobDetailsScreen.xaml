@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AluMeet.Views.PostJobDetailsScreen"
+             Title="PostJobDetailsScreen">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="0, 25, 0, 25">
+                <!--Job Title Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Entry Placeholder="Job Title" />
+                </Frame>
+
+                <!--Company Name Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Entry Placeholder="Company Name" />
+                </Frame>
+
+
+                <!--Location Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Entry Placeholder="Location" />
+                </Frame>
+
+                <!--Description of the Job Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                    <Editor Placeholder="Description of the event" HorizontalOptions="FillAndExpand" HeightRequest="150"  MinimumWidthRequest="500"/>
+                </Frame>
+
+                <!--Date of Event Textfield-->
+                <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                    <Entry x:Name="DateOfEvent" Placeholder="Date of Event" IsEnabled="False"/>
+                    <ImageButton Source="Images/calender.png" HeightRequest="20" Margin="5" Grid.Column="1" HorizontalOptions="End" Clicked="ChooseDate" />
+                        </Grid>
+                 </Frame>   
+
+
+                <!--Post Job Button-->
+                <Button Text="Post Job" Padding="15" Margin="20, 0, 20, 0" Clicked="AddJobDetailsClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
