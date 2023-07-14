@@ -1,5 +1,5 @@
 ﻿
-
+using AluMeet.Views;
 namespace AluMeet;
 
 public partial class App : Application
@@ -10,7 +10,8 @@ public partial class App : Application
 
 		MainPage = new AppShell();
         Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
-        
-	}
+        Routing.RegisterRoute(nameof(EventListScreen), typeof(EventListScreen));
+        Routing.RegisterRoute(nameof(PostEventScreen), typeof(PostEventScreen));
+    }
 }
 

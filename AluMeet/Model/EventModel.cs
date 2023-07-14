@@ -9,7 +9,7 @@ public class EventModel
 {
     /// <summary>
     /// Gets or sets the unique identifier of the event.
-    /// </summary>
+    /// </summarry>
     public int ID { get; set; }
 
     /// <summary>
@@ -25,7 +25,7 @@ public class EventModel
     /// <summary>
     /// Gets or sets the date of the event.
     /// </summary>
-    public DateTime DateOfEvent { get; set; }
+    public string DateOfEvent { get; set; }
 
     /// <summary>
     /// Gets or sets the time of the event.

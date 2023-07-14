@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
     // func to navigate to events screen
     private void PostEventsNavBtnItemTapped(object obj, EventArgs e)
     {
-        Navigation.PushAsync(new PostEventScreen());
+        Navigation.PushAsync(new EventListScreen());
     }
 }
 
