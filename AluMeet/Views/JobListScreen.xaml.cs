@@ -73,7 +73,7 @@ public partial class JobListScreen : ContentPage
         }
 
         // Reset the selected item (so it can be selected again if needed)
-       // JobListView.SelectedItem = null;
+        JobListView.SelectedItem = null;
     }
 
 

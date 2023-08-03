@@ -1925,3 +1925,8 @@
 /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/stamp/_GenerateJavaStubs.stamp
 /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/stamp/_ResolveLibraryProjectImports.stamp
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-hdpi/profile_icon.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-mdpi/profile_icon.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-xhdpi/profile_icon.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-xxhdpi/profile_icon.png
+/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/obj/Debug/net6.0-android/resizetizer/r/drawable-xxxhdpi/profile_icon.png

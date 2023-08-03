@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AluMeet.Views.ProfileScreen"
+             Title="ProfileScreen">
+   <ScrollView>
+       <VerticalStackLayout>
+          <Image
+              Source="Images/profile_icon.svg"
+              Margin="0, 40, 0, 20"
+              />
+
+            <!-- Label to display the name -->
+            <Label
+               Text="John Doa"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="18"
+               TextDecorations="Underline"
+               FontAttributes="Bold"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               Margin="0, 0, 0, 5"
+             />
+
+           <Frame Padding="15" Margin="20, 5, 20, 15" BackgroundColor="{DynamicResource Key=GrayColor}">
+               <VerticalStackLayout>
+                   <Label
+               Text="Class of"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 5"
+             />
+                   <Label
+               x:Name="ClassOf"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 10"
+             />
+                   <Label
+               Text="Program"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 5"
+             />
+                   <Label
+               x:Name="Program"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 10"
+             />
+                   <Label
+               Text="Email"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 5"
+             />
+                   <Label
+               x:Name="Email"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 10"
+             />
+                   <Label
+               Text="Phone"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 5"
+             />
+                   <Label
+               x:Name="Phone"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 10"
+             />
+                   <Label
+               Text="Job"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 5"
+             />
+                   <Label
+               x:Name="Job"
+               TextColor="{DynamicResource Key=Black}"
+               FontSize="14"
+               VerticalOptions="Start" 
+               HorizontalOptions="Start"
+               Margin="0, 0, 0, 5"
+             />
+
+               </VerticalStackLayout>
+           </Frame>
+
+       </VerticalStackLayout>
+
+   </ScrollView>
+</ContentPage>
