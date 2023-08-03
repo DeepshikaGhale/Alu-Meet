@@ -9,7 +9,7 @@ public class EventModel
 {
     /// <summary>
     /// Gets or sets the unique identifier of the event.
-    /// </summarry>
+    /// </summary>
     public int ID { get; set; }
 
     /// <summary>

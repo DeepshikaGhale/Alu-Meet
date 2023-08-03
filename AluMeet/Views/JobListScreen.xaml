@@ -8,9 +8,12 @@
     <Grid BackgroundColor="Transparent">
         <!-- ListView to display the job list -->
         <ListView
+            x:Name="JobListView"
             ItemsSource="{Binding JobList}"
             HasUnevenRows="True"
             Margin="0, 15, 0, 0"
+            ItemSelected ="OnItemSelected"
+            SelectionMode="Single"
             SeparatorVisibility="None">
 
             <!-- DataTemplate for each item in the ListView -->

@@ -4,9 +4,9 @@
                  x:Class="AluMeet.Views.PostEventScreen"
                  Title="PostEventScreen">
 
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="Images/back_arrow.svg" Clicked="BackButtonClicked" />
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
 
     <ScrollView>
         <VerticalStackLayout Margin="0, 25, 0, 25">
