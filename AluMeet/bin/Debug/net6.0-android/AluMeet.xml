@@ -77,7 +77,11 @@
             Represents an event with details such as ID, title, location, date, time, and description.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:AluMeet.Model.EventModel.ID" -->
+        <member name="P:AluMeet.Model.EventModel.ID">
+            <summary>
+            Gets or sets the unique identifier of the event.
+            </summary>
+        </member>
         <member name="P:AluMeet.Model.EventModel.EventTitle">
             <summary>
             Gets or sets the title of the event.

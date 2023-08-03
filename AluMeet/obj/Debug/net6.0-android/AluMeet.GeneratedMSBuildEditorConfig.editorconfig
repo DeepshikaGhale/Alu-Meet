@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.EventListScr
 build_metadata.AdditionalFiles.TargetPath = Views/EventListScreen.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/EventListScreen.xaml
 
+[/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/JobDetailsScreen.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.JobDetailsScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/JobDetailsScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/JobDetailsScreen.xaml
+
 [/Users/deepshikaghale/Documents/FInalProject/Android/Alu-Meet/AluMeet/Views/JobListScreen.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AluMeet.Views.JobListScreen.xaml
