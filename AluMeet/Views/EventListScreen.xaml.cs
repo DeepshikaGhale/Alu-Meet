@@ -75,6 +75,17 @@ public partial class EventListScreen : ContentPage
 
     }
 
+    void OnEventItemSelected(object sender, SelectedItemChangedEventArgs args)
+    {
+        if (args.SelectedItem is EventModel eventModel)
+        {
+            // Navigate to the details page and pass the selected event to it
+            Navigation.PushAsync(new EventDetailsScreen(eventModel));
+        }
+
+        EventListView.SelectedItem = null;
+    }
+
 
     private void AddEventDetailsClicked(object sender, EventArgs e)
     {

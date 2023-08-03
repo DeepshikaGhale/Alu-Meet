@@ -37,6 +37,13 @@ public partial class MainPage : ContentPage
     {
         Navigation.PushAsync(new DirectoryListScreen());
     }
-}
+
+    
+    // func to navigate to profile screen
+    private void ProfileNavBtnTapped(object obj, EventArgs e)
+    {
+        Navigation.PushAsync(new ProfileScreen());
+    }
+}   
 
 
