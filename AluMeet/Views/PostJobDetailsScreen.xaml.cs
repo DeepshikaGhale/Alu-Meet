@@ -1,11 +1,15 @@
-﻿namespace AluMeet.Views;
+﻿using AluMeet.ViewModels;
+
+namespace AluMeet.Views;
 
 public partial class PostJobDetailsScreen : ContentPage
 {
 	public PostJobDetailsScreen()
 	{
 		InitializeComponent();
-	}
+        BindingContext = new JobViewModel(Navigation);
+
+    }
 
     private void ChooseDate(object sender, EventArgs e)
     {

@@ -2,29 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.Views.PostJobDetailsScreen"
+             xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
+             x:DataType="viewmodel:JobViewModel"
              Title="PostJobDetailsScreen">
 
     <ScrollView>
         <VerticalStackLayout Margin="0, 25, 0, 25">
                 <!--Job Title Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Entry Placeholder="Job Title" />
+                    <Entry Placeholder="Job Title" Text="{Binding JobTitle}"/>
                 </Frame>
 
                 <!--Company Name Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Entry Placeholder="Company Name" />
+                    <Entry Placeholder="Company Name" Text="{Binding CompanyName}"/>
                 </Frame>
 
 
                 <!--Location Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Entry Placeholder="Location" />
+                    <Entry Placeholder="Location" Text="{Binding JobLocation}"/>
                 </Frame>
 
                 <!--Description of the Job Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Editor Placeholder="Description of the event" HorizontalOptions="FillAndExpand" HeightRequest="150"  MinimumWidthRequest="500"/>
+                    <Editor Placeholder="Description of the event" HorizontalOptions="FillAndExpand" HeightRequest="150"  MinimumWidthRequest="500" Text="{Binding JobDescription}"/>
                 </Frame>
 
                 <!--Date of Event Textfield-->
@@ -36,14 +38,14 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="DateOfEvent" Placeholder="Date of Event" IsEnabled="False"/>
+                    <Entry x:Name="DateOfEvent" Placeholder="Date of Event" IsEnabled="False" Text="{Binding JobDeadline}"/>
                     <ImageButton Source="Images/calender.png" HeightRequest="20" Margin="5" Grid.Column="1" HorizontalOptions="End" Clicked="ChooseDate" />
                         </Grid>
                  </Frame>   
 
 
                 <!--Post Job Button-->
-                <Button Text="Post Job" Padding="15" Margin="20, 0, 20, 0" Clicked="AddJobDetailsClicked"/>
+                <Button Text="Post Job" Padding="15" Margin="20, 0, 20, 0" Command="{Binding PostJob}"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
