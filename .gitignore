@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+.vs/
+.vs
+.vs/*
 .nuspec/
 .buildtasks/
 templatesTest/
@@ -216,6 +219,9 @@ csx/
 # Microsoft Azure Emulator
 ecf/
 rcf/
+
+AluMeet/obj
+AluMeet/obj/*
 
 # Windows Store app package directories and files
 AppPackages/
