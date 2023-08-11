@@ -1,4 +1,4 @@
-﻿using static Android.Content.ClipData;
+﻿
 using System.Collections.ObjectModel;
 using AluMeet.Model;
 

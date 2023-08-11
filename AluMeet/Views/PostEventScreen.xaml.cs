@@ -1,6 +1,4 @@
 ﻿using Microsoft.Maui.Controls;
-using Android.App;
-using Application = Android.App.Application;
 
 namespace AluMeet.Views;
 

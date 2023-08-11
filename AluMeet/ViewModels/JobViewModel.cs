@@ -118,7 +118,6 @@ namespace AluMeet.ViewModels
                 
             });
 
-            string s = "s";
             
         }
     }
