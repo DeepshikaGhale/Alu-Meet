@@ -8,10 +8,10 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 
-		Routing.RegisterRoute(nameof(LoginViewScreen), typeof(LoginViewScreen));
-        Routing.RegisterRoute(nameof(RegisterViewScreen), typeof(RegisterViewScreen));
-        Routing.RegisterRoute(nameof(JobListScreen), typeof(JobListScreen));
-        Routing.RegisterRoute(nameof(PostEventScreen), typeof(PostEventScreen));
+		//Routing.RegisterRoute(nameof(LoginViewScreen), typeof(LoginViewScreen));
+  //      Routing.RegisterRoute(nameof(RegisterViewScreen), typeof(RegisterViewScreen));
+  //      Routing.RegisterRoute(nameof(JobListScreen), typeof(JobListScreen));
+  //      Routing.RegisterRoute(nameof(PostEventScreen), typeof(PostEventScreen));
     }
 }
 

@@ -9,11 +9,11 @@ namespace AluMeet.ViewModels
 {
     public class RegisterViewModel : INotifyPropertyChanged
 	{
-        string email;
-        string password;
-        string fullName;
-        string username;
-        int graduationYear;
+        private string email;
+        private string password;
+        private string fullName;
+        private string username;
+        private int graduationYear;
         private INavigation _navigation;
         public string Email
         {
@@ -89,50 +89,41 @@ namespace AluMeet.ViewModels
         private async void RegisterBtnTappedAsync(object obj)
         {
             await SaveUserDataToDatabaseAsync();
-            //try
-            //{
-            //    // Connect our application to firebase auth
-            //    FirebaseAuthProvider firebaseAuthProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
-            //    // Firebase auth selected createUserWithEmailAndPassword option
-            //    var auth = await firebaseAuthProvider.CreateUserWithEmailAndPasswordAsync(Email, Password);
-            //    // after register firebase give us token
-            //    string token = auth.FirebaseToken;
-            //    // check token if it is null give alert message else back to login page
-
-                
-            //    if (token != null)
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Alert", "User Registered successfully", "OK");
-                    
-            //        await this._navigation.PopAsync();
-            //    }
-                
-                
+            try
+            {
+                // Connect our application to firebase auth
+                FirebaseAuthProvider firebaseAuthProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIKey));
+                // Firebase auth selected createUserWithEmailAndPassword option
+                var auth = await firebaseAuthProvider.CreateUserWithEmailAndPasswordAsync(Email, Password);
+                // after register firebase give us token
+                string token = auth.FirebaseToken;
+                // check token if it is null give alert message else back to login page
 
 
+                if (token != null)
+                    await App.Current.MainPage.DisplayAlert("Alert", "User Registered successfully", "OK");
 
-
-
-            //}
-            //catch (FirebaseAuthException ex)
-            //{
-            //    if (ex.Reason == AuthErrorReason.EmailExists)
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Error", "Email already exists. Please choose a different email.", "OK");
-            //    }
-            //    else if (ex.Reason == AuthErrorReason.InvalidEmailAddress)
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Error", "Invalid email address. Please enter a valid email.", "OK");
-            //    }
-            //    else if (ex.Reason == AuthErrorReason.WeakPassword)
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Error", "Weak password. Please choose a stronger password.", "OK");
-            //    }
-            //    else
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Error", "Registration failed. Please try again.", "OK");
-            //    }
-            //}
+                 await this._navigation.PopAsync();
+            }
+            catch (FirebaseAuthException ex)
+            {
+                if (ex.Reason == AuthErrorReason.EmailExists)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Email already exists. Please choose a different email.", "OK");
+                }
+                else if (ex.Reason == AuthErrorReason.InvalidEmailAddress)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Invalid email address. Please enter a valid email.", "OK");
+                }
+                else if (ex.Reason == AuthErrorReason.WeakPassword)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Weak password. Please choose a stronger password.", "OK");
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Registration failed. Please try again.", "OK");
+                }
+            }
         }
 
         private async Task  SaveUserDataToDatabaseAsync()
@@ -152,7 +143,6 @@ namespace AluMeet.ViewModels
                 Email = Email,
                 GraduationYear = GraduationYear
             });
-            string s = "s";
         }
 
         public string WebAPIKey = "AIzaSyCkRo_giGFKNA04W7NArjMPXeHHpKnooAo";
