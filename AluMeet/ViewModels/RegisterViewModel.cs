@@ -1,84 +1,96 @@
 ﻿using System;
 using System.ComponentModel;
 using AluMeet.Model;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
 
 namespace AluMeet.ViewModels
 {
-    public class RegisterViewModel : INotifyPropertyChanged
+    internal partial class RegisterViewModel : ObservableObject
 	{
+        [ObservableProperty]
         private string email;
+
+        [ObservableProperty]
         private string password;
+
+        [ObservableProperty]
         private string fullName;
+
+        [ObservableProperty]
         private string username;
+
+        [ObservableProperty]
         private int graduationYear;
+
         private INavigation _navigation;
-        public string Email
-        {
-            get { return email; }
-            set
-            {
-                if (email != value)
-                {
-                    email = value;
-                    OnPropertyChanged(nameof(Email));
-                }
-            }
-        }
 
-        public string Username
-        {
-            get { return username; }
-            set
-            {
-                if (username != value)
-                {
-                    username = value;
-                    OnPropertyChanged(nameof(Username));
-                }
-            }
-        }
+        //public string Email
+        //{
+        //    get { return email; }
+        //    set
+        //    {
+        //        if (email != value)
+        //        {
+        //            email = value;
+        //            OnPropertyChanged(nameof(Email));
+        //        }
+        //    }
+        //}
 
-        public string FullName
-        {
-            get { return fullName; }
-            set
-            {
-                if (fullName != value)
-                {
-                    fullName = value;
-                    OnPropertyChanged(nameof(FullName));
-                }
-            }
-        }
+        //public string Username
+        //{
+        //    get { return username; }
+        //    set
+        //    {
+        //        if (username != value)
+        //        {
+        //            username = value;
+        //            OnPropertyChanged(nameof(Username));
+        //        }
+        //    }
+        //}
 
-        public int GraduationYear
-        {
-            get { return graduationYear; }
-            set
-            {
-                if (graduationYear != value)
-                {
-                    graduationYear = value;
-                    OnPropertyChanged(nameof(GraduationYear));
-                }
-            }
-        }
+        //public string FullName
+        //{
+        //    get { return fullName; }
+        //    set
+        //    {
+        //        if (fullName != value)
+        //        {
+        //            fullName = value;
+        //            OnPropertyChanged(nameof(FullName));
+        //        }
+        //    }
+        //}
 
-        public string Password
-        {
-            get { return password; }
-            set
-            {
-                if (password != value)
-                {
-                    password = value;
-                    OnPropertyChanged(nameof(Password));
-                }
-            }
-        }
+        //public int GraduationYear
+        //{
+        //    get { return graduationYear; }
+        //    set
+        //    {
+        //        if (graduationYear != value)
+        //        {
+        //            graduationYear = value;
+        //            OnPropertyChanged(nameof(GraduationYear));
+        //        }
+        //    }
+        //}
+
+        //public string Password
+        //{
+        //    get { return password; }
+        //    set
+        //    {
+        //        if (password != value)
+        //        {
+        //            password = value;
+        //            OnPropertyChanged(nameof(Password));
+        //        }
+        //    }
+        //}
 
         public RegisterViewModel(INavigation navigation)
 		{
@@ -141,20 +153,25 @@ namespace AluMeet.ViewModels
             {
                 Name = FullName,
                 Email = Email,
-                GraduationYear = GraduationYear
+                GraduationYear = GraduationYear,
+                Id = 6879,
+                ProgramStudied = "Business Administration",
+                ContactDetails = "987-654-3210",
+                CurrentEmployer = "XYZ Corporation",
+                CurrentPosition = "Marketing Manager",
+                TwitterHandle = "@janesmith",
+                FacebookHandle = "facebook.com/janesmith",
+                LinkedInHandle = "linkedin.com/in/janesmith",
+                ProfilePicture = "profile_picture2.jpg"
             });
         }
 
         public string WebAPIKey = "AIzaSyCkRo_giGFKNA04W7NArjMPXeHHpKnooAo";
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
+     
         public Command RegisterUser { get; }
 
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
     }
 }
 
