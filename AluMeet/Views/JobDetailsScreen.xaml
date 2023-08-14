@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- JobDetailsScreen.xaml -->
+<!-- This XAML file defines the layout and content of the Job Details screen in a .NET MAUI application. -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AluMeet.Views.JobDetailsScreen"
+             Title="JobDetailsScreen">
+             
+    <!-- The entire content of the page is wrapped inside a ScrollView, allowing for scrolling if the content overflows the screen. -->
+    <ScrollView>
+        <!-- The main layout container for the page is a VerticalStackLayout, which stacks its child elements vertically. -->
+        <VerticalStackLayout>
+        
+            <!-- The first Frame contains the Job Name, Company Name, Deadline, and Location details. -->
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15" BackgroundColor="Transparent">
+                <VerticalStackLayout>
+                
+                    <!-- Job Name Label displays the name of the job. -->
+                    <Label
+                        x:Name="JobName"
+                        TextColor="{DynamicResource Key=AppColor}"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        Margin="0, 0, 0, 5"
+                        />
+                        
+                    <!-- Company Name Label displays the name of the company offering the job. -->
+                    <Label
+                       x:Name="CompanyName"
+                       TextColor="{DynamicResource Key=Black}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="Start"
+                       Margin="0, 0, 0, 5"
+                       />
+                       
+                    <!-- Deadline Label displays the application deadline for the job. -->
+                    <Label
+                        x:Name="Deadline"
+                        TextColor="{DynamicResource Key=Black}"
+                        FontSize="14"
+                        FontAttributes="Bold"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        Margin="0, 0, 0, 5"
+                        />
+                        
+                    <!-- Location Label displays the location of the job. -->
+                    <Label
+                        x:Name="Location"
+                        TextColor="{DynamicResource Key=Black}"
+                        FontSize="14"
+                        FontAttributes="Bold"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                        Margin="0, 0, 0, 5"
+                        />
+                        
+                </VerticalStackLayout>
+            </Frame>
+            
+            <!-- The second Frame contains the job details description. -->
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15" BackgroundColor="Transparent">
+                <VerticalStackLayout>
+                
+                    <!-- The "Details:" Label serves as a heading for the job description. -->
+                    <Label
+                          Text="Details:"
+                          TextColor="{DynamicResource Key=AppColor}"
+                          FontSize="16"
+                          FontAttributes="Bold"
+                          VerticalOptions="Start" 
+                          HorizontalOptions="Start"
+                          Margin="0, 0, 0, 5"
+                       />
+                       
+                    <!-- JobDescription Label displays the detailed description of the job. -->
+                    <Label
+                           x:Name="JobDescription"
+                           TextColor="{DynamicResource Key=Black}"
+                           LineBreakMode="WordWrap"
+                           FontSize="14"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Start"
+                           Margin="0, 0, 0, 5"
+                          />
+
+                </VerticalStackLayout>
+
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

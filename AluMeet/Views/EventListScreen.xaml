@@ -10,9 +10,11 @@
     <Grid BackgroundColor="Transparent">
         <!-- ListView to display the event list -->
         <ListView
+            x:Name="EventListView"
             ItemsSource="{Binding EventList}"
             HasUnevenRows="True"
             Margin="0, 15, 0, 0"
+            ItemSelected="OnEventItemSelected"
             SeparatorVisibility="None">
 
             <!-- DataTemplate for each item in the ListView -->

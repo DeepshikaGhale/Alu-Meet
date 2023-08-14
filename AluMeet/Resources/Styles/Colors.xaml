@@ -43,5 +43,6 @@
 
     <!--app color-->
     <Color x:Key="AppColor">#272E6D</Color>
+    <Color x:Key="GrayColor">#D9D9D9</Color>
 
 </ResourceDictionary>
