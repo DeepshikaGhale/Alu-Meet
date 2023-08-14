@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.Views.LoginViewScreen"
+             xmlns:viewModel="clr-namespace:AluMeet.ViewModels"
+            x:DataType="viewModel:LoginViewModel"
              Title="LoginViewScreen">
     <VerticalStackLayout HorizontalOptions="Center" Margin="0,100,0,0">
             <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50"
@@ -13,15 +15,15 @@
 
         <!--Username Textfield-->
         <Frame Padding="25, 0, 20, 0" Margin="0, 0, 0, 20" WidthRequest="250">
-            <Entry Placeholder="Username or Email" />
+            <Entry Placeholder="Username or Email" Text="{Binding Email}"/>
         </Frame>
 
         <!--Password Textfield-->
         <Frame Padding="25, 0, 20, 0" WidthRequest="250">
-            <Entry Placeholder="Password" />
+            <Entry Placeholder="Password" Text="{Binding Password}"/>
         </Frame>
 
         <!--Login Button-->
-        <Button Text="LOGIN" WidthRequest="250" Margin="0, 20, 0,0"/>
+        <Button Text="LOGIN" WidthRequest="250" Margin="0, 20, 0,0" Command="{Binding LognBtn}"/>
     </VerticalStackLayout>
 </ContentPage>

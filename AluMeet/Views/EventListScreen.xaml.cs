@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.ObjectModel;
 using AluMeet.Model;
+using AluMeet.ViewModels;
 
 namespace AluMeet.Views;
 
@@ -12,66 +13,66 @@ public partial class EventListScreen : ContentPage
 	{
 		InitializeComponent();
         //populate list view with data
-        EventList = new ObservableCollection<EventModel>
-        {
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-            new EventModel{
-                ID = 1,
-                EventTitle = "Hosting Alumini MeetUp",
-                Location= "College RefreshMent Center",
-                DateOfEvent = "2023/08/21",
-                TimeOfEvent = "1:00 PM",
-                Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-            },
-         };
-         BindingContext = this;
+        //EventList = new ObservableCollection<EventModel>
+        //{
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+        //    new EventModel{
+        //        ID = 1,
+        //        EventTitle = "Hosting Alumini MeetUp",
+        //        Location= "College RefreshMent Center",
+        //        DateOfEvent = "2023/08/21",
+        //        TimeOfEvent = "1:00 PM",
+        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
+        //    },
+         //};
+         BindingContext = new EventListViewModel();
 
     }
 

@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.Views.JobListScreen"
+             xmlns:vm="clr-namespace:AluMeet.ViewModels"
+             x:DataType="vm:JobListViewModel"
+             xmlns:model="clr-namespace:AluMeet.Model"
              Title="JobListScreen">
 
     <!-- Grid to hold the content -->
@@ -17,8 +20,8 @@
             SeparatorVisibility="None">
 
             <!-- DataTemplate for each item in the ListView -->
-            <ListView.ItemTemplate>
-                <DataTemplate>
+            <ListView.ItemTemplate >
+                <DataTemplate x:DataType="model:JobModel">
                     <!-- ViewCell to define the layout of each item -->
                     <ViewCell>
                         <!-- Grid to hold the content of the item -->
