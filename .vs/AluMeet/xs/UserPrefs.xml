@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{1B38CBAE-9EFD-4F4A-AA38-95FC4DD2B083}|Default">
+  <MonoDevelop.Ide.ItemProperties.AluMeet PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AluMeet/ViewModels/RegisterViewModel.cs">
+    <Files>
+      <File FileName="AluMeet/Views/PostEventScreen.xaml.cs" />
+      <File FileName="AluMeet/Views/DirectoryListScreen.xaml" />
+      <File FileName="AluMeet/Views/DirectoryListScreen.xaml.cs" />
+      <File FileName="AluMeet/Views/JobListScreen.xaml.cs" />
+      <File FileName="AluMeet/Model/AlumniModel.cs" />
+      <File FileName="AluMeet/ViewModels/JobViewModel.cs" Line="120" Column="1" />
+      <File FileName="AluMeet/Views/EventListScreen.xaml.cs" />
+      <File FileName="AluMeet/ViewModels/RegisterViewModel.cs" Line="108" Column="18" />
+      <File FileName="AluMeet/Model/EventModel.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AluMeet" expanded="True">
+            <Node name="AluMeet">
+              <Node name="ViewModels" expanded="True">
+                <Node name="RegisterViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="PostEventScreen.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.68" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MultiItemStartupConfigurations />
+</Properties>
