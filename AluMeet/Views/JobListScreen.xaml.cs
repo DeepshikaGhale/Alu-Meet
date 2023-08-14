@@ -1,10 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using AluMeet.Model;
-<<<<<<< HEAD
 using AluMeet.ViewModels;
-=======
-using static Android.Provider.ContactsContract.CommonDataKinds;
->>>>>>> main
 
 namespace AluMeet.Views;
 

@@ -1,5 +1,4 @@
 ﻿using System;
-<<<<<<< HEAD
 using AluMeet.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -50,15 +49,6 @@ namespace AluMeet.ViewModels
 			}
 		}
 
-=======
-namespace AluMeet.ViewModels
-{
-	public class LoginViewModel
-	{
-		public LoginViewModel()
-		{
-		}
->>>>>>> main
-	}
+}
 }
 

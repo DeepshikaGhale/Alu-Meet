@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using AluMeet.Model;
+using AluMeet.Services;
 using Firebase.Database;
 using Firebase.Database.Query;
 
@@ -105,10 +106,11 @@ namespace AluMeet.ViewModels
 
             // Initialize Firebase Realtime Database client
             FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
-
+            UserInformation userInformation = new UserInformation();
+            var userId = userInformation.GetUserId();
 
             // Save user data to Firebase Realtime Database under "Alumni" node
-            var res = firebaseClient.Child("Jobs").PostAsync(new JobModel
+            var res = firebaseClient.Child("Jobs").Child(userId).PostAsync(new JobModel
             {
                 JobTitle = JobTitle,
                 JobDeadline = JobDeadline,
