@@ -7,8 +7,6 @@ namespace AluMeet.Views;
 
 public partial class JobListScreen : ContentPage
 {
-    //public ObservableCollection<JobModel> JobList { get; set; }
-
     private JobListViewModel _jobListViewModel;
 
     public JobListScreen()

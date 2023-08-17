@@ -5,132 +5,129 @@ using AluMeet.Services;
 using Firebase.Database;
 using Firebase.Database.Query;
 
-namespace AluMeet.ViewModels
-{
-    public class JobViewModel : INotifyPropertyChanged
+namespace AluMeet.ViewModels;
+
+public class JobViewModel : INotifyPropertyChanged
 	{
 		public JobViewModel(INavigation navigation)
 		{
-            PostJob = new Command(PostJobBtnTapped);
-            this._navigation = navigation;
+        PostJob = new Command(PostJobBtnTapped);
+        this._navigation = navigation;
 		}
 
-        private INavigation _navigation;
+    private INavigation _navigation;
 
-        string jobTitle;
-        DateTime jobDeadline;
-        string jobDescription;
-        string companyName;
-        string jobLocation;
+    string jobTitle;
+    DateTime jobDeadline;
+    string jobDescription;
+    string companyName;
+    string jobLocation;
 
 
-        public string JobTitle
+    public string JobTitle
+    {
+        get { return jobTitle; }
+        set
         {
-            get { return jobTitle; }
-            set
+            if (jobTitle != value)
             {
-                if (jobTitle != value)
-                {
-                    jobTitle = value;
-                    OnPropertyChanged(nameof(JobTitle));
-                }
+                jobTitle = value;
+                OnPropertyChanged(nameof(JobTitle));
             }
         }
-
-        public DateTime JobDeadline
-        {
-            get { return jobDeadline; }
-            set
-            {
-                if (jobDeadline != value)
-                {
-                    jobDeadline = value;
-                    OnPropertyChanged(nameof(JobDeadline));
-                }
-            }
-        }
-
-        public string JobDescription
-        {
-            get { return jobDescription; }
-            set
-            {
-                if (jobDescription != value)
-                {
-                    jobDescription = value;
-                    OnPropertyChanged(nameof(JobDescription));
-                }
-            }
-        }
-
-        public string CompanyName
-        {
-            get { return companyName; }
-            set
-            {
-                if (companyName != value)
-                {
-                    companyName = value;
-                    OnPropertyChanged(nameof(CompanyName));
-                }
-            }
-        }
-
-        public string JobLocation
-        {
-            get { return jobLocation; }
-            set
-            {
-                if (jobLocation != value)
-                {
-                    jobLocation = value;
-                    OnPropertyChanged(nameof(JobLocation));
-                }
-            }
-        }
-
-        public Command PostJob { get; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private async void PostJobBtnTapped(object obj)
-        {
-            await SaveUserDataToDatabaseAsync(obj);
-        }
-
-            private async Task SaveUserDataToDatabaseAsync(object obj)
-        {
-            // Firebase Realtime Database URL
-            string firebaseDatabaseUrl = "https://alummeet-af9e0-default-rtdb.firebaseio.com/";
-      
-
-            // Initialize Firebase Realtime Database client
-            FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
-            var userId = UserInformation.GetUserId();
-
-            // Save user data to Firebase Realtime Database under "Alumni" node
-            var res = await firebaseClient.Child("Jobs").Child(userId).PostAsync(new JobModel
-            {
-                JobTitle = JobTitle,
-                JobDeadline = JobDeadline,
-                JobDescription = JobDescription,
-                CompanyName = CompanyName,
-                Location = JobLocation
-                
-            });
-
-            await this._navigation.PopAsync();
-
-        }
-
-       
     }
 
+    public DateTime JobDeadline
+    {
+        get { return jobDeadline; }
+        set
+        {
+            if (jobDeadline != value)
+            {
+                jobDeadline = value;
+                OnPropertyChanged(nameof(JobDeadline));
+            }
+        }
+    }
 
+    public string JobDescription
+    {
+        get { return jobDescription; }
+        set
+        {
+            if (jobDescription != value)
+            {
+                jobDescription = value;
+                OnPropertyChanged(nameof(JobDescription));
+            }
+        }
+    }
+
+    public string CompanyName
+    {
+        get { return companyName; }
+        set
+        {
+            if (companyName != value)
+            {
+                companyName = value;
+                OnPropertyChanged(nameof(CompanyName));
+            }
+        }
+    }
+
+    public string JobLocation
+    {
+        get { return jobLocation; }
+        set
+        {
+            if (jobLocation != value)
+            {
+                jobLocation = value;
+                OnPropertyChanged(nameof(JobLocation));
+            }
+        }
+    }
+
+    public Command PostJob { get; }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    private async void PostJobBtnTapped(object obj)
+    {
+        await SaveUserDataToDatabaseAsync(obj);
+    }
+
+        private async Task SaveUserDataToDatabaseAsync(object obj)
+    {
+        // Firebase Realtime Database URL
+        string firebaseDatabaseUrl = "https://alummeet-af9e0-default-rtdb.firebaseio.com/";
+  
+
+        // Initialize Firebase Realtime Database client
+        FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
+        var userId = UserInformation.GetUserId();
+
+        // Save user data to Firebase Realtime Database under "Alumni" node
+        var res = await firebaseClient.Child("Jobs").Child(userId).PostAsync(new JobModel
+        {
+            JobTitle = JobTitle,
+            JobDeadline = JobDeadline,
+            JobDescription = JobDescription,
+            CompanyName = CompanyName,
+            Location = JobLocation
+            
+        });
+
+        await this._navigation.PopAsync();
+
+    }
+
+   
 }
 

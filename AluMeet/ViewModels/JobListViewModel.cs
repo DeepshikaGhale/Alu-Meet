@@ -44,16 +44,7 @@ namespace AluMeet.ViewModels;
         }
 
 
-        //var observable = await firebaseClient.Child($"Jobs/{UserInformation.GetUserId}")
-        //    .AsObservable<JobModel>()
-        //    .Subscribe(obj =>
-        //    {
-        //        if (obj.Object != null)
-        //        {
-        //            JobList.Add(obj.Object);
-        //        }
-        //    });
-        //Console.WriteLine(observable.ToString());
+       
     }
 	}
 

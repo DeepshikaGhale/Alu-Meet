@@ -2,23 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="AluMeet.Views.PostEventScreen"
+                 xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
+                 x:DataType="viewmodel:PostEventViewModel"
                  Title="PostEventScreen">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="Images/back_arrow.svg" Clicked="BackButtonClicked" />
-    </ContentPage.ToolbarItems>
 
     <ScrollView>
         <VerticalStackLayout Margin="0, 25, 0, 25">
             <!--Event Title Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Entry Placeholder="Event Title" />
+                    <Entry Placeholder="Event Title" Text="{Binding EventName}"/>
                 </Frame>
 
 
                 <!--Location Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Entry Placeholder="Location" />
+                    <Entry Placeholder="Location" Text="{Binding Location}"/>
                 </Frame>
 
                 <!--Date of Event Textfield-->
@@ -30,7 +28,7 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="DateOfEvent" Placeholder="Date of Event" IsEnabled="False"/>
+                    <Entry x:Name="DateOfEvent" Placeholder="Date of Event" IsEnabled="False" Text="{Binding DateOfEvent}"/>
                     <ImageButton Source="Images/calender.png" HeightRequest="20" Margin="5" Grid.Column="1" HorizontalOptions="End" Clicked="ChooseDate" />
                         </Grid>
                  </Frame>   
@@ -43,7 +41,7 @@
 
                     <!--Time of Event Textfield-->
                     <Frame Grid.Column="0" Padding="15, 6, 15, 6" Margin="20, 5, 10, 15">
-                        <Entry Placeholder="Time of Event" />
+                        <Entry Placeholder="Time of Event" Text="{Binding TimeOfEvent}" />
                     </Frame>
 
                      <!--AM Textfield-->
@@ -56,7 +54,7 @@
 
                 <!--Description of the Event Textfield-->
                 <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
-                    <Editor Placeholder="Description of the event" HorizontalOptions="FillAndExpand" HeightRequest="120"  MinimumWidthRequest="500"/>
+                    <Editor Placeholder="Description of the event" Text="{Binding Description}" HorizontalOptions="FillAndExpand" HeightRequest="120"  MinimumWidthRequest="500"/>
                 </Frame>
 
                 <!--RSVPs Textfield-->
@@ -66,7 +64,7 @@
 
 
                 <!--Post Event Details Button-->
-                <Button Text="Post Event Details" Padding="15" Margin="20, 0, 20, 0" />
+                <Button Text="Post Event Details" Padding="15" Margin="20, 0, 20, 0" Command="{Binding PostEvent}"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

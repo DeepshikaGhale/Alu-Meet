@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\back_arrow.svg" />
 	  <None Remove="Resources\Images\alumini_cap.svg" />
 	  <None Remove="Resources\Images\Group 10profileIcon.svg" />
+	  <None Remove="Shared\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Model\" />
@@ -67,6 +68,7 @@
 	  <Folder Include="Views\" />
 	  <Folder Include="Services\" />
 	  <Folder Include="Views\" />
+	  <Folder Include="Shared\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />

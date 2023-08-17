@@ -6,75 +6,23 @@ using AluMeet.ViewModels;
 namespace AluMeet.Views;
 
 public partial class EventListScreen : ContentPage
-{   //data for list view
-    public ObservableCollection<EventModel> EventList { get; set; }
+{
+    private EventListViewModel _eventListViewModel;
 
     public EventListScreen()
 	{
 		InitializeComponent();
-        //populate list view with data
-        //EventList = new ObservableCollection<EventModel>
-        //{
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-        //    new EventModel{
-        //        ID = 1,
-        //        EventTitle = "Hosting Alumini MeetUp",
-        //        Location= "College RefreshMent Center",
-        //        DateOfEvent = "2023/08/21",
-        //        TimeOfEvent = "1:00 PM",
-        //        Description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!"
-        //    },
-         //};
-         BindingContext = new EventListViewModel();
-
+        _eventListViewModel = new EventListViewModel();
+         BindingContext = _eventListViewModel;
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        //loads the data
+        _eventListViewModel.FetchEventData();
+    }
+
 
     void OnEventItemSelected(object sender, SelectedItemChangedEventArgs args)
     {
