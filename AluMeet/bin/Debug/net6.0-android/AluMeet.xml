@@ -148,6 +148,12 @@
         <member name="P:AluMeet.ViewModels.EventListViewModel.EventTitle">
             <inheritdoc cref="F:AluMeet.ViewModels.EventListViewModel.eventTitle"/>
         </member>
+        <member name="T:AluMeet.ViewModels.JobListViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:AluMeet.ViewModels.JobListViewModel.JobList">
+            <inheritdoc cref="F:AluMeet.ViewModels.JobListViewModel.jobList"/>
+        </member>
         <member name="T:AluMeet.ViewModels.LoginViewModel">
             <inheritdoc/>
         </member>
@@ -190,6 +196,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EventTitle">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EventTitle" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.JobList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "JobList" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
         </member>
@@ -213,6 +222,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EventTitle">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EventTitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.JobList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "JobList" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>

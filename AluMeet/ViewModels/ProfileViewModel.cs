@@ -9,7 +9,7 @@ namespace AluMeet.ViewModels
 		[ObservableProperty]
 		private string email;
 
-		public ProfileViewModel()
+        public ProfileViewModel()
 		{
 		}
 

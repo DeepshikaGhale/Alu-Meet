@@ -11,7 +11,7 @@ namespace AluMeet.ViewModels
 	{
 		public JobViewModel(INavigation navigation)
 		{
-            PostJob = new Command(SaveUserDataToDatabaseAsync);
+            PostJob = new Command(PostJobBtnTapped);
             this._navigation = navigation;
 		}
 
@@ -98,7 +98,12 @@ namespace AluMeet.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private void  SaveUserDataToDatabaseAsync(object obj)
+        private async void PostJobBtnTapped(object obj)
+        {
+            await SaveUserDataToDatabaseAsync(obj);
+        }
+
+            private async Task SaveUserDataToDatabaseAsync(object obj)
         {
             // Firebase Realtime Database URL
             string firebaseDatabaseUrl = "https://alummeet-af9e0-default-rtdb.firebaseio.com/";
@@ -106,11 +111,10 @@ namespace AluMeet.ViewModels
 
             // Initialize Firebase Realtime Database client
             FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
-            UserInformation userInformation = new UserInformation();
-            var userId = userInformation.GetUserId();
+            var userId = UserInformation.GetUserId();
 
             // Save user data to Firebase Realtime Database under "Alumni" node
-            var res = firebaseClient.Child("Jobs").Child(userId).PostAsync(new JobModel
+            var res = await firebaseClient.Child("Jobs").Child(userId).PostAsync(new JobModel
             {
                 JobTitle = JobTitle,
                 JobDeadline = JobDeadline,
@@ -120,7 +124,8 @@ namespace AluMeet.ViewModels
                 
             });
 
-            
+            await this._navigation.PopAsync();
+
         }
 
        

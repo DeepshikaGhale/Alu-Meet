@@ -1,8 +1,8 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace AluMeet.Services
-{
+namespace AluMeet.Services;
+
 	public class UserInformation
 	{
 		public UserInformation()
@@ -10,19 +10,18 @@ namespace AluMeet.Services
 
 		}
 
-        public string GetUserId()
-        {
-            // Retrieve the current user ID from preferences or authentication (e.g., Firebase Auth)
-            var userInfo = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("FirebaseToken", ""));
-            return userInfo.User.LocalId;
-        }
+    public static string GetUserId()
+    {
+        // Retrieve the current user ID from preferences or authentication (e.g., Firebase Auth)
+        var userInfo = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("FirebaseToken", ""));
+        return userInfo.User.LocalId;
+    }
 
-        public string GetFirebaseToken()
-        {
-            // Retrieve the current firebase token from preferences or authentication (e.g., Firebase Auth)
-            var userInfo = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("FirebaseToken", ""));
-            return userInfo.FirebaseToken;
-        }
+    public static string GetFirebaseToken()
+    {
+        // Retrieve the current firebase token from preferences or authentication (e.g., Firebase Auth)
+        var userInfo = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("FirebaseToken", ""));
+        return userInfo.FirebaseToken;
     }
 }
 
