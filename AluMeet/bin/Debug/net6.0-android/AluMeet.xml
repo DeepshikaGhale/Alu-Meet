@@ -142,6 +142,12 @@
             Gets or sets the deadline for applying to the job.
             </summary>
         </member>
+        <member name="T:AluMeet.ViewModels.AlumniDirectoryViewmodel">
+            <inheritdoc/>
+        </member>
+        <member name="P:AluMeet.ViewModels.AlumniDirectoryViewmodel.AluminiList">
+            <inheritdoc cref="F:AluMeet.ViewModels.AlumniDirectoryViewmodel.aluminiList"/>
+        </member>
         <member name="T:AluMeet.ViewModels.EventListViewModel">
             <inheritdoc/>
         </member>
@@ -217,6 +223,9 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AluminiList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AluminiList" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EventList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EventList" generated properties.</summary>
         </member>
@@ -264,6 +273,9 @@
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AluminiList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AluminiList" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EventList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EventList" generated properties.</summary>

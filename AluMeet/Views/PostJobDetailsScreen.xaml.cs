@@ -8,7 +8,6 @@ public partial class PostJobDetailsScreen : ContentPage
 	{
 		InitializeComponent();
         BindingContext = new JobViewModel(Navigation);
-
     }
 
     private void ChooseDate(object sender, EventArgs e)

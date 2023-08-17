@@ -6,6 +6,7 @@
              x:DataType="vm:AlumniDirectoryViewmodel"
              xmlns:model="clr-namespace:AluMeet.Model"
              Title="DirectoryListScreen">
+
     <ListView
             ItemsSource="{Binding AluminiList}"
             HasUnevenRows="True"
