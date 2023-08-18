@@ -25,6 +25,7 @@ namespace AluMeet.ViewModels
                 var eventData = new ObservableCollection<EventModel>(
                     obj.Select(item => new EventModel
                     {
+                        ID = item.Key, //add the key
                         EventTitle = item.Object.EventTitle,
                         Location = item.Object.Location,
                         DateOfEvent = item.Object.DateOfEvent,

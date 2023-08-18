@@ -10,7 +10,7 @@ public class EventModel
     /// <summary>
     /// Gets or sets the unique identifier of the event.
     /// </summary>
-    public int ID { get; set; }
+    public string ID { get; set; }
 
     /// <summary>
     /// Gets or sets the title of the event.

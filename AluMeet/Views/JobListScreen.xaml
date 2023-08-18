@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:AluMeet.ViewModels"
              x:DataType="vm:JobListViewModel"
              xmlns:model="clr-namespace:AluMeet.Model"
-             Title="JobListScreen">
+             Title="Job List Screen">
 
     <!-- Grid to hold the content -->
     <Grid BackgroundColor="Transparent">

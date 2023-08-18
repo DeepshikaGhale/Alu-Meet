@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:AluMeet.ViewModels"
              x:DataType="vm:AlumniDirectoryViewmodel"
              xmlns:model="clr-namespace:AluMeet.Model"
-             Title="DirectoryListScreen">
+             Title="Directory List Screen">
 
     <ListView
             ItemsSource="{Binding AluminiList}"
