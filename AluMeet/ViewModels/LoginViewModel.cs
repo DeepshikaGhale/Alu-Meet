@@ -38,14 +38,19 @@ namespace AluMeet.ViewModels
 				var content = await auth.GetFreshAuthAsync();
 				var serializedContent = JsonConvert.SerializeObject(content);
 				Preferences.Set("FirebaseToken", serializedContent);
-				await _navigation.PushAsync(new ProfileViewScreen());
-			}
+				Console.WriteLine(serializedContent);
+
+                await App.Current.MainPage.DisplayAlert("Alert", "User Login successfully", "OK");
+
+                await this._navigation.PopAsync();
+
+            }
 			catch (FirebaseAuthException e)
 			{
-				if(e.Reason == AuthErrorReason.InvalidEmailAddress)
+				if (e.Reason == AuthErrorReason.InvalidEmailAddress)
 				{
-                    await App.Current.MainPage.DisplayAlert("Error", "Invalid email address. Please enter a valid email.", "OK");
-                }
+					await App.Current.MainPage.DisplayAlert("Error", "Invalid email address. Please enter a valid email.", "OK");
+				}
 			}
 		}
 

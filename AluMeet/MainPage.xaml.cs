@@ -1,16 +1,29 @@
 ﻿using AluMeet.Views;
+using AluMeet.Services;
+using AluMeet.ViewModels;
 
 namespace AluMeet;
 
 public partial class MainPage : ContentPage
 {
+    private CheckProperty _checkProperty;
+
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+        _checkProperty = new CheckProperty();
+        BindingContext = _checkProperty;
+    }
 
-	// func to navigate to login screen
-	private void loginNavBtnItemTapped(object obj, EventArgs e) {
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        //checks the data
+        _checkProperty.ShowViewIfDataIsPresent();
+    }
+
+    // func to navigate to login screen
+    private void loginNavBtnItemTapped(object obj, EventArgs e) {
 		Navigation.PushAsync(new LoginViewScreen());
 	}
 
@@ -27,7 +40,7 @@ public partial class MainPage : ContentPage
     }
 
     // func to navigate to jobs screen
-    private void JobNavBtnItemTapped(object obj, EventArgs e)
+    private void JobNavBtnItemTapped(System.Object sender, System.EventArgs e)
     {
         Navigation.PushAsync(new JobListScreen());
     }
@@ -44,6 +57,8 @@ public partial class MainPage : ContentPage
     {
         Navigation.PushAsync(new ProfileScreen());
     }
+
+   
 }   
 
 

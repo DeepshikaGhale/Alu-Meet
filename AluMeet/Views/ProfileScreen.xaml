@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.Views.ProfileScreen"
+             xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
+             x:DataType="viewmodel:ProfileViewModel"
              Title="ProfileScreen">
+
    <ScrollView>
        <VerticalStackLayout>
           <Image
@@ -12,7 +15,7 @@
 
             <!-- Label to display the name -->
             <Label
-               Text="John Doa"
+               Text="{Binding Name}"
                TextColor="{DynamicResource Key=Black}"
                FontSize="18"
                TextDecorations="Underline"
@@ -36,6 +39,7 @@
                x:Name="ClassOf"
                TextColor="{DynamicResource Key=Black}"
                FontSize="14"
+               Text="{Binding ClassOf}"
                VerticalOptions="Start" 
                HorizontalOptions="Start"
                Margin="0, 0, 0, 10"
@@ -51,6 +55,7 @@
                    <Label
                x:Name="Program"
                TextColor="{DynamicResource Key=Black}"
+               Text="{Binding PhoneNumber}"
                FontSize="14"
                VerticalOptions="Start" 
                HorizontalOptions="Start"
@@ -68,6 +73,7 @@
                x:Name="Email"
                TextColor="{DynamicResource Key=Black}"
                FontSize="14"
+               Text="{Binding Email}"
                VerticalOptions="Start" 
                HorizontalOptions="Start"
                Margin="0, 0, 0, 10"
@@ -84,6 +90,7 @@
                x:Name="Phone"
                TextColor="{DynamicResource Key=Black}"
                FontSize="14"
+               Text="{Binding PhoneNumber}" 
                VerticalOptions="Start" 
                HorizontalOptions="Start"
                Margin="0, 0, 0, 10"
@@ -100,6 +107,7 @@
                x:Name="Job"
                TextColor="{DynamicResource Key=Black}"
                FontSize="14"
+               Text="{Binding Job}" 
                VerticalOptions="Start" 
                HorizontalOptions="Start"
                Margin="0, 0, 0, 5"
@@ -108,6 +116,7 @@
                </VerticalStackLayout>
            </Frame>
 
+           <Button Text="Logout" Command="{Binding LogoutUser}" Margin="16" HeightRequest="50"/>
        </VerticalStackLayout>
 
    </ScrollView>

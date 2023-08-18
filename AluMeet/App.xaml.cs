@@ -9,9 +9,6 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new AppShell();
-        Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
-        Routing.RegisterRoute(nameof(EventListScreen), typeof(EventListScreen));
-        Routing.RegisterRoute(nameof(PostEventScreen), typeof(PostEventScreen));
-    }
+	}
 }
 

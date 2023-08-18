@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using AluMeet.ViewModels;
 
 namespace AluMeet.Views;
 
@@ -7,6 +8,7 @@ public partial class PostEventScreen : ContentPage
 	public PostEventScreen()
 	{
 		InitializeComponent();
+        BindingContext = new PostEventViewModel(Navigation);
 	}
 
     private async void BackButtonClicked(object sender, EventArgs e)

@@ -13,7 +13,7 @@ public class AlumniModel
     /// <summary>
     /// Gets or sets the ID of the alumni.
     /// </summary>
-    public int Id { get; set; }
+    public string Id { get; set; }
 
     /// <summary>
     /// Gets or sets the ProgramStudied of the alumni.

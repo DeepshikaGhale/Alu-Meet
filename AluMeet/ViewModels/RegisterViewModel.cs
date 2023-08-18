@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using AluMeet.Model;
+using AluMeet.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Firebase.Auth;
 using Firebase.Database;
@@ -27,70 +28,7 @@ namespace AluMeet.ViewModels
 
         private INavigation _navigation;
 
-        //public string Email
-        //{
-        //    get { return email; }
-        //    set
-        //    {
-        //        if (email != value)
-        //        {
-        //            email = value;
-        //            OnPropertyChanged(nameof(Email));
-        //        }
-        //    }
-        //}
-
-        //public string Username
-        //{
-        //    get { return username; }
-        //    set
-        //    {
-        //        if (username != value)
-        //        {
-        //            username = value;
-        //            OnPropertyChanged(nameof(Username));
-        //        }
-        //    }
-        //}
-
-        //public string FullName
-        //{
-        //    get { return fullName; }
-        //    set
-        //    {
-        //        if (fullName != value)
-        //        {
-        //            fullName = value;
-        //            OnPropertyChanged(nameof(FullName));
-        //        }
-        //    }
-        //}
-
-        //public int GraduationYear
-        //{
-        //    get { return graduationYear; }
-        //    set
-        //    {
-        //        if (graduationYear != value)
-        //        {
-        //            graduationYear = value;
-        //            OnPropertyChanged(nameof(GraduationYear));
-        //        }
-        //    }
-        //}
-
-        //public string Password
-        //{
-        //    get { return password; }
-        //    set
-        //    {
-        //        if (password != value)
-        //        {
-        //            password = value;
-        //            OnPropertyChanged(nameof(Password));
-        //        }
-        //    }
-        //}
+        private string userId;
 
         public RegisterViewModel(INavigation navigation)
 		{
@@ -100,7 +38,7 @@ namespace AluMeet.ViewModels
 
         private async void RegisterBtnTappedAsync(object obj)
         {
-            await SaveUserDataToDatabaseAsync();
+            
             try
             {
                 // Connect our application to firebase auth
@@ -108,11 +46,16 @@ namespace AluMeet.ViewModels
                 // Firebase auth selected createUserWithEmailAndPassword option
                 var auth = await firebaseAuthProvider.CreateUserWithEmailAndPasswordAsync(Email, Password);
                 // after register firebase give us token
-                string token = auth.FirebaseToken;
+                var token = auth.FirebaseToken;
                 // check token if it is null give alert message else back to login page
 
 
+                userId = auth.User.LocalId;
+
+                await SaveUserDataToDatabaseAsync();
+
                 if (token != null)
+
                     await App.Current.MainPage.DisplayAlert("Alert", "User Registered successfully", "OK");
 
                  await this._navigation.PopAsync();
@@ -146,7 +89,6 @@ namespace AluMeet.ViewModels
 
             // Initialize Firebase Realtime Database client
             FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
-       
 
             // Save user data to Firebase Realtime Database under "Alumni" node
             var alumni = await firebaseClient.Child("Alumni").PostAsync(new AlumniModel
@@ -154,7 +96,7 @@ namespace AluMeet.ViewModels
                 Name = FullName,
                 Email = Email,
                 GraduationYear = GraduationYear,
-                Id = 6879,
+                Id = userId,
                 ProgramStudied = "Business Administration",
                 ContactDetails = "987-654-3210",
                 CurrentEmployer = "XYZ Corporation",

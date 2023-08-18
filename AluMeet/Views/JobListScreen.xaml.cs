@@ -1,61 +1,26 @@
 ﻿using System.Collections.ObjectModel;
 using AluMeet.Model;
 using AluMeet.ViewModels;
+using AndroidX.Lifecycle;
 
 namespace AluMeet.Views;
 
 public partial class JobListScreen : ContentPage
 {
-    //public ObservableCollection<JobModel> JobList { get; set; }
+    private JobListViewModel _jobListViewModel;
 
     public JobListScreen()
 	{
 		InitializeComponent();
+        _jobListViewModel = new JobListViewModel();
+        BindingContext = _jobListViewModel;
+    }
 
-        //JobList = new ObservableCollection<JobModel> {
-        //    new JobModel{
-        //        ID = "1",
-        //        CompanyName = "E.K Bana Solutions",
-        //        JobDeadline = DateTime.Now,
-        //        JobDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!",
-        //        JobTitle = "Intern",
-        //        Location = "Lalitpur"
-        //    },
-        //    new JobModel{
-        //        ID = "1",
-        //        CompanyName = "E.K Bana Solutions",
-        //        JobDeadline = DateTime.Now,
-        //        JobDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!",
-        //        JobTitle = "Intern",
-        //        Location = "Lalitpur"
-        //    },
-        //    new JobModel{
-        //        ID = "1",
-        //        CompanyName = "E.K Bana Solutions",
-        //        JobDeadline = DateTime.Now,
-        //        JobDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!",
-        //        JobTitle = "Intern",
-        //        Location = "Lalitpur"
-        //    },
-        //    new JobModel{
-        //        ID = "1",
-        //        CompanyName = "E.K Bana Solutions",
-        //        JobDeadline = DateTime.Now,
-        //        JobDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!",
-        //        JobTitle = "Intern",
-        //        Location = "Lalitpur"
-        //    },
-        //    new JobModel{
-        //        ID = "1",
-        //        CompanyName = "E.K Bana Solutions",
-        //        JobDeadline = DateTime.Now,
-        //        JobDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not! Lorem Ipsum is simply dummy text of the printing and typesetting industry. This is to test if it works or not!",
-        //        JobTitle = "Intern",
-        //        Location = "Lalitpur"
-            //},
-        //};
-
-        BindingContext = new JobListViewModel();;
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        //loads the data
+        _jobListViewModel.FetchJobData();
     }
 
     void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

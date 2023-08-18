@@ -1,63 +1,54 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using AluMeet.Model;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Firebase.Database;
 
 namespace AluMeet.ViewModels
 {
-	public class AlumniDirectoryViewmodel
-	{
-        public ObservableCollection<AlumniModel> AluminiList { get; set; }
-        public AlumniDirectoryViewmodel()
-		{
-            AluminiList = new ObservableCollection<AlumniModel>
+internal partial class AlumniDirectoryViewmodel: ObservableObject
+    {
+        [ObservableProperty]
+        public ObservableCollection<AlumniModel> aluminiList = new ();
+       
+        public async Task FetchAlumniData()
         {
-            new AlumniModel
+            AluminiList.Clear();
+            try
             {
-                Id = 1,
-                ProgramStudied = "Computer Science",
-                Name = "John Doe",
-                GraduationYear = 2020,
-                ContactDetails = "123-456-7890",
-                CurrentEmployer = "ABC Company",
-                CurrentPosition = "Software Engineer",
-                Email = "john.doe@example.com",
-                TwitterHandle = "@johndoe",
-                FacebookHandle = "facebook.com/johndoe",
-                LinkedInHandle = "linkedin.com/in/johndoe",
-                ProfilePicture = "profile_picture1.jpg"
-            },
-            new AlumniModel
-            {
-                Id = 2,
-                ProgramStudied = "Business Administration",
-                Name = "Jane Smith",
-                GraduationYear = 2018,
-                ContactDetails = "987-654-3210",
-                CurrentEmployer = "XYZ Corporation",
-                CurrentPosition = "Marketing Manager",
-                Email = "jane.smith@example.com",
-                TwitterHandle = "@janesmith",
-                FacebookHandle = "facebook.com/janesmith",
-                LinkedInHandle = "linkedin.com/in/janesmith",
-                ProfilePicture = "profile_picture2.jpg"
-            }
-        };
-            FetchAlumniData();
-		}
+                FirebaseClient firebaseClient = new FirebaseClient("https://alummeet-af9e0-default-rtdb.firebaseio.com/");
+                var obj = await firebaseClient.Child("Alumni").OnceAsync<AlumniModel>();
 
-        public void FetchAlumniData()
-        {
-            FirebaseClient firebaseClient = new FirebaseClient("https://alummeet-af9e0-default-rtdb.firebaseio.com/");
-            var observable = firebaseClient.Child("Alumni")
-                .AsObservable<AlumniModel>()
-                .Subscribe(obj =>
-                {
-                    if (obj.Object != null)
+                var alumniData = new ObservableCollection<AlumniModel>(
+                    obj.Select(item => new AlumniModel
                     {
-                        AluminiList.Add(obj.Object);
-                    }
-                });
+                        Name = item.Object.Name,
+                        Email = item.Object.Email,
+                        GraduationYear = item.Object.GraduationYear,
+                        Id = item.Object.Id,
+                        ProgramStudied = "Business Administration",
+                        ContactDetails = "987-654-3210",
+                        CurrentEmployer = "XYZ Corporation",
+                        CurrentPosition = "Marketing Manager",
+                        TwitterHandle = "@janesmith",
+                        FacebookHandle = "facebook.com/janesmith",
+                        LinkedInHandle = "linkedin.com/in/janesmith",
+                        ProfilePicture = "profile_picture2.jpg"
+                    }).ToList());
+
+                foreach (var alumni in alumniData)
+                {
+                    AluminiList.Add(alumni);
+                }
+
+                Console.WriteLine("Success");
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
+
+
+
         }
     }
 }
