@@ -1,20 +1,29 @@
 ﻿using AluMeet.Views;
 using AluMeet.Services;
+using AluMeet.ViewModels;
 
 namespace AluMeet;
 
 public partial class MainPage : ContentPage
 {
+    private CheckProperty _checkProperty;
+
 	public MainPage()
 	{
 		InitializeComponent();
-        CheckProperty checkProperty = new CheckProperty();
-        checkProperty.ShowViewIfDataIsPresent();
-        BindingContext = new CheckProperty();
+        _checkProperty = new CheckProperty();
+        BindingContext = _checkProperty;
     }
 
-	// func to navigate to login screen
-	private void loginNavBtnItemTapped(object obj, EventArgs e) {
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        //checks the data
+        _checkProperty.ShowViewIfDataIsPresent();
+    }
+
+    // func to navigate to login screen
+    private void loginNavBtnItemTapped(object obj, EventArgs e) {
 		Navigation.PushAsync(new LoginViewScreen());
 	}
 

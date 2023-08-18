@@ -1,41 +1,25 @@
 ﻿using System.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Maui.Controls;
 
 namespace AluMeet.Services;
-public class CheckProperty : INotifyPropertyChanged
+internal partial class CheckProperty : ObservableObject
 {
-        private bool _hasDataInPreferences;
+        [ObservableProperty]
+        private bool hasDataInPreferences;
 
-        public bool HasDataInPreferences
-        {
-            get => _hasDataInPreferences;
-            set
-            {
-                if (_hasDataInPreferences != value)
-                {
-                    _hasDataInPreferences = value;
-                    OnPropertyChanged(nameof(HasDataInPreferences));
-                }
-            }
-        }
-
-        public bool ShowProfile;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        [ObservableProperty]
+        public bool showLoginAndRegisterBtn;
 
 
-    // check if the token is present or not
-    public void ShowViewIfDataIsPresent() { 
+        // check if the token is present or not
+        public void ShowViewIfDataIsPresent() { 
         //UserInformation userInformation = new UserInformation();
         var firebaseToken = UserInformation.GetFirebaseToken();
 
-        var hasData = (firebaseToken != null);
+        var hasData = (firebaseToken != "");
         HasDataInPreferences = hasData;
-        ShowProfile = !HasDataInPreferences;
+        ShowLoginAndRegisterBtn = !HasDataInPreferences;
+        Console.WriteLine(ShowLoginAndRegisterBtn);
     }
 }

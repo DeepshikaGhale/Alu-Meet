@@ -5,6 +5,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using Firebase.Database;
 using AluMeet.Model;
 using Firebase.Database.Query;
+using static Android.Util.EventLogTags;
 
 namespace AluMeet.ViewModels;
 
@@ -67,7 +68,7 @@ internal partial class PostEventViewModel : ObservableObject
                 TimeOfEvent = TimeOfEvent,
                 Description = Description
             });
-
+            await App.Current.MainPage.DisplayAlert("Success", "Event has been posted sucessfully", "OK");
             Console.WriteLine("Data has been created successfully");
             await this._navigation.PopAsync();
         }
@@ -76,6 +77,24 @@ internal partial class PostEventViewModel : ObservableObject
         }
     }
 
+    ////delete data
+    //private async Task DeleteEventData() {
+    //    // Firebase Realtime Database URL
+    //    string firebaseDatabaseUrl = "https://alummeet-af9e0-default-rtdb.firebaseio.com/";
+
+    //    // Initialize Firebase Realtime Database client
+    //    FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
+    //    var userId = UserInformation.GetUserId();
+
+    //    try
+    //    {
+    //        await firebaseClient.Child("Events").Child(userId).DeleteAsync();
+    //    }
+    //    catch (Exception e) {
+
+    //    }
+
+    //}
     
 }
 

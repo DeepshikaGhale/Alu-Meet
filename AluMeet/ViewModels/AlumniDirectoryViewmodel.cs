@@ -11,7 +11,7 @@ internal partial class AlumniDirectoryViewmodel: ObservableObject
         [ObservableProperty]
         public ObservableCollection<AlumniModel> aluminiList = new ();
        
-        public async void FetchAlumniData()
+        public async Task FetchAlumniData()
         {
             AluminiList.Clear();
             try

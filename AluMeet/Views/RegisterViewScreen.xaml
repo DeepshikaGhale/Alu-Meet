@@ -5,6 +5,7 @@
              xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
              x:DataType="viewmodel:RegisterViewModel"
              Title="RegisterViewScreen">
+
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
          <Label Text="Register" HorizontalOptions="Center" Margin="0, 0, 0, 20"
                FontSize="Title" TextDecorations="Underline"/>

@@ -123,6 +123,7 @@ public class JobViewModel : INotifyPropertyChanged
             Location = JobLocation
             
         });
+        await App.Current.MainPage.DisplayAlert("Success", "Event has been posted sucessfully", "OK");
 
         await this._navigation.PopAsync();
 
