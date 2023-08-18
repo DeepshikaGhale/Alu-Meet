@@ -6,31 +6,43 @@
              x:DataType="viewmodel:RegisterViewModel"
              Title="RegisterViewScreen">
 
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-         <Label Text="Register" HorizontalOptions="Center" Margin="0, 0, 0, 20"
-               FontSize="Title" TextDecorations="Underline"/>
-        <!--Username Textfield-->
-        <Frame Padding="10" Margin="0, 0, 0, 20" WidthRequest="250" CornerRadius="5">
-            <Entry Placeholder="Full Name" Text="{Binding FullName}"/>
-        </Frame>
+    <!-- Scrollable content for the registration screen -->
+    <ScrollView>
+        <VerticalStackLayout Margin="0, 25, 0, 25">
 
-        <!--Email Textfield-->
-        <Frame Padding="10" WidthRequest="250" CornerRadius="5" Margin="0, 0, 0, 20">
-            <Entry Placeholder="Email" Text="{Binding Email}"/>
-        </Frame>
+            <!-- Profile icon image -->
+            <Image
+                Source="Images/profile_icon.svg"
+                Margin="0, 40, 0, 20"
+            />
 
-        <!--Graduation year Textfield-->
-        <Frame Padding="10" WidthRequest="250" CornerRadius="5" Margin="0, 0, 0, 20">
-            <Entry Placeholder="Graduation Year" Keyboard="Numeric" Text="{Binding GraduationYear}"/>
-        </Frame>
+            <!-- Title label -->
+            <Label Text="Register" HorizontalOptions="Center" Margin="0, 0, 0, 20"
+                   FontSize="Title" />
 
-        <!--Password Textfield-->
-        <Frame Padding="10" WidthRequest="250" CornerRadius="5">
-            <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
-        </Frame>
+            <!-- Full Name Textfield -->
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                <Entry Placeholder="Full Name" Text="{Binding FullName}"/>
+            </Frame>
 
-        <!--Register Button-->
-        <Button Text="Register" WidthRequest="250" Margin="0, 20, 0,0" HeightRequest="50" Command="{Binding RegisterUser}"/>
+            <!-- Email Textfield -->
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                <Entry Placeholder="Email" Text="{Binding Email}"/>
+            </Frame>
 
-    </VerticalStackLayout>
+            <!-- Graduation Year Textfield -->
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                <Entry Placeholder="Graduation Year" Keyboard="Numeric" Text="{Binding GraduationYear}" MaxLength="4"/>
+            </Frame>
+
+            <!-- Password Textfield -->
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+            </Frame>
+
+            <!-- Register Button -->
+            <Button Text="Register" Padding="15" Margin="20, 0, 20, 0" HeightRequest="50" Command="{Binding RegisterUser}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

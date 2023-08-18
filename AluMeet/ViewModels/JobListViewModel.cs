@@ -15,6 +15,8 @@ namespace AluMeet.ViewModels;
 
     public async void FetchJobData()
     {
+        JobList.Clear();
+
         try
         {
             FirebaseClient firebaseClient = new FirebaseClient("https://alummeet-af9e0-default-rtdb.firebaseio.com/");

@@ -5,25 +5,26 @@
              xmlns:viewModel="clr-namespace:AluMeet.ViewModels"
             x:DataType="viewModel:LoginViewModel"
              Title="LoginViewScreen">
-    <VerticalStackLayout HorizontalOptions="Center" Margin="0,100,0,0">
-            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50"
-       BorderColor="Black" BackgroundColor="Transparent" HasShadow="False"
-                   Margin="0,0,0, 40">
-    <Image Source="AluMeet.Resources.Images.profile_user.png" Aspect="AspectFill" />
-</Frame>
 
+    <VerticalStackLayout  Margin="0, 25, 0, 25">
+         <Image
+              Source="Images/profile_icon.svg"
+              Margin="0, 40, 0, 20"
+              />
 
-        <!--Username Textfield-->
-        <Frame Padding="25, 0, 20, 0" Margin="0, 0, 0, 20" WidthRequest="250">
-            <Entry Placeholder="Username or Email" Text="{Binding Email}"/>
+        <!--Email Textfield-->
+        <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+             <Entry Placeholder="Username or Email" Text="{Binding Email}"/>
         </Frame>
 
         <!--Password Textfield-->
-        <Frame Padding="25, 0, 20, 0" WidthRequest="250">
-            <Entry Placeholder="Password" Text="{Binding Password}"/>
+        
+        <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15">
+               <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True"/>
         </Frame>
 
         <!--Login Button-->
-        <Button Text="LOGIN" WidthRequest="250" Margin="0, 20, 0,0" Command="{Binding LognBtn}"/>
+        <Button Text="LOGIN" Padding="15" Margin="20, 0, 20, 0" Command="{Binding LognBtn}"/>
+
     </VerticalStackLayout>
 </ContentPage>
