@@ -24,7 +24,7 @@ namespace AluMeet.ViewModels
         private string username;
 
         [ObservableProperty]
-        private int graduationYear;
+        private string graduationYear = "";
 
         private INavigation _navigation;
 
@@ -95,7 +95,7 @@ namespace AluMeet.ViewModels
             {
                 Name = FullName,
                 Email = Email,
-                GraduationYear = GraduationYear,
+                GraduationYear = int.Parse(GraduationYear),
                 Id = userId,
                 ProgramStudied = "Business Administration",
                 ContactDetails = "987-654-3210",

@@ -2,11 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AluMeet.Views.EventDetailsScreen"
+             xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
+             x:DataType="viewmodel:PostEventViewModel"
              Title="EventDetailsScreen">
 
     <!-- The entire content of the page is wrapped inside a ScrollView, allowing for scrolling if the content overflows the screen. -->
     <ScrollView>
-        <!-- The main layout container for the page is a Frame, which adds a border and padding to its child elements. -->
+        <VerticalStackLayout>
+            <!-- The main layout container for the page is a Frame, which adds a border and padding to its child elements. -->
         <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15" BackgroundColor="Transparent">
             <!-- The content inside the Frame is organized using a VerticalStackLayout, which stacks its child elements vertically. -->
             <VerticalStackLayout>
@@ -53,7 +56,18 @@
                     HorizontalOptions="Start"
                     Margin="0, 0, 0, 5"
                 />
+
+                
             </VerticalStackLayout>
         </Frame>
+            <Frame Padding="15, 6, 15, 6" Margin="20, 5, 20, 15" BackgroundColor="Transparent" BorderColor="Transparent">
+            <HorizontalStackLayout>
+                <Button Text="Edit" Margin="0, 10, 10, 0"/>
+
+                <Button Text="Delete" Margin="0, 10, 10, 0" Command="{Binding DeleteEvent}"/>
+            </HorizontalStackLayout>
+                </Frame>
+        </VerticalStackLayout>
+        
     </ScrollView>
 </ContentPage>

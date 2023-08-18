@@ -4,7 +4,7 @@
              xmlns:vm="clr-namespace:AluMeet.ViewModels"
              x:DataType="vm:EventListViewModel"
              xmlns:model="clr-namespace:AluMeet.Model"
-             Title="EventListScreen">
+             Title="Event List Screen">
 
     <!-- Grid to hold the content -->
     <Grid BackgroundColor="Transparent">

@@ -4,7 +4,8 @@
              x:Class="AluMeet.Views.RegisterViewScreen"
              xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
              x:DataType="viewmodel:RegisterViewModel"
-             Title="RegisterViewScreen">
+             Title="Register Screen">
+
 
     <!-- Scrollable content for the registration screen -->
     <ScrollView>

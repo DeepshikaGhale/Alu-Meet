@@ -4,7 +4,7 @@
              x:Class="AluMeet.Views.PostJobDetailsScreen"
              xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
              x:DataType="viewmodel:JobViewModel"
-             Title="PostJobDetailsScreen">
+             Title="Post Job Details Screen">
 
     <ScrollView>
         <VerticalStackLayout Margin="0, 25, 0, 25">

@@ -4,7 +4,7 @@
              x:Class="AluMeet.Views.LoginViewScreen"
              xmlns:viewModel="clr-namespace:AluMeet.ViewModels"
             x:DataType="viewModel:LoginViewModel"
-             Title="LoginViewScreen">
+             Title="Login Screen">
 
     <VerticalStackLayout  Margin="0, 25, 0, 25">
          <Image

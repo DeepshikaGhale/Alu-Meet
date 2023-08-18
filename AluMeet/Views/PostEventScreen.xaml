@@ -4,7 +4,7 @@
                  x:Class="AluMeet.Views.PostEventScreen"
                  xmlns:viewmodel="clr-namespace:AluMeet.ViewModels"
                  x:DataType="viewmodel:PostEventViewModel"
-                 Title="PostEventScreen">
+                 Title="Post Event Details Screen">
 
     <ScrollView>
         <VerticalStackLayout Margin="0, 25, 0, 25">
