@@ -4,6 +4,7 @@ using AluMeet.Model;
 using AluMeet.Services;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Microsoft.Extensions.Logging;
 
 namespace AluMeet.ViewModels;
 
@@ -13,7 +14,10 @@ public class JobViewModel : INotifyPropertyChanged
 		{
         PostJob = new Command(PostJobBtnTapped);
         this._navigation = navigation;
-		}
+
+        DeleteJob = new Command(DeleteJobData);
+        this._navigation = navigation;
+    }
 
     private INavigation _navigation;
 
@@ -22,7 +26,20 @@ public class JobViewModel : INotifyPropertyChanged
     string jobDescription;
     string companyName;
     string jobLocation;
+    string jobID;
 
+    public string JobID
+    {
+        get { return jobID; }
+        set
+        {
+            if (jobID != value)
+            {
+                jobID = value;
+                OnPropertyChanged(nameof(JobID));
+            }
+        }
+    }
 
     public string JobTitle
     {
@@ -91,6 +108,8 @@ public class JobViewModel : INotifyPropertyChanged
 
     public Command PostJob { get; }
 
+    public Command DeleteJob { get; }
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected void OnPropertyChanged(string propertyName)
@@ -98,6 +117,7 @@ public class JobViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
+    //post job details
     private async void PostJobBtnTapped(object obj)
     {
         await SaveUserDataToDatabaseAsync(obj);
@@ -129,6 +149,38 @@ public class JobViewModel : INotifyPropertyChanged
 
     }
 
-   
+    //delete data
+    private async void DeleteJobData(object obj)
+    {
+        bool confirmed = await App.Current.MainPage.DisplayAlert("Confirm Delete", "Are you sure you want to delete this job details?", "Yes", "No");
+        if (confirmed)
+        {
+            await DeleteJobDataFromDatabaseAsync(obj);
+        }
+    }
+
+
+    private async Task DeleteJobDataFromDatabaseAsync(object obj)
+    {
+        // Firebase Realtime Database URL
+        string firebaseDatabaseUrl = "https://alummeet-af9e0-default-rtdb.firebaseio.com/";
+
+        // Initialize Firebase Realtime Database client
+        FirebaseClient firebaseClient = new FirebaseClient(firebaseDatabaseUrl);
+        var userId = UserInformation.GetUserId();
+
+        try
+        {
+            await firebaseClient.Child("Jobs").Child(userId).Child(jobID).DeleteAsync();
+            await App.Current.MainPage.DisplayAlert("Delete Success", "Job has been deleted successfully.", "Ok");
+            await _navigation.PopAsync();
+        }
+        catch (Exception e)
+        {
+            await App.Current.MainPage.DisplayAlert("Delete Failed", "Job details cannot be deleted.", "Ok");
+        }
+    }
+
+
 }
 

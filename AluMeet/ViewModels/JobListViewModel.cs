@@ -26,7 +26,7 @@ namespace AluMeet.ViewModels;
             var jobData = new ObservableCollection<JobModel>(
                 obj.Select(item => new JobModel
                 {
-                    ID = item.Object.ID,
+                    ID = item.Key,
                     CompanyName = item.Object.CompanyName,
                     JobDeadline = item.Object.JobDeadline,
                     JobDescription = item.Object.JobDescription,
