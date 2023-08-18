@@ -26,4 +26,10 @@ public partial class JobDetailsScreen : ContentPage
         _jobViewModel.JobID = currentJob.ID;
         BindingContext = _jobViewModel;
     }
+
+    // func to execute edit job
+    private async void EditJobDataBtnClicked(object obj, EventArgs e)
+    {
+        await App.Current.MainPage.DisplayAlert("Notice", "This feature is still under construction", "OK");
+    }
 }

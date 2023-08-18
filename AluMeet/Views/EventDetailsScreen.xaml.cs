@@ -22,6 +22,12 @@ public partial class EventDetailsScreen : ContentPage
         _postEventViewModel.EventID = currentEventModel.ID;
         BindingContext = _postEventViewModel;
 
-		
     }
+
+	 // func to execute event edit
+    private async void EditEventDataBtnClicked(object obj, EventArgs e)
+    {
+		await App.Current.MainPage.DisplayAlert("Notice", "This feature is still under construction", "OK");
+    }
+
 }
